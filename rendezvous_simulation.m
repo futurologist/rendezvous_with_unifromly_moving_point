@@ -1,5 +1,3 @@
-
-```matlab
 function main()
     h = 0.3;
     a0 = 0.1;
@@ -100,8 +98,8 @@ function main()
     norm(v-vB0)
 end
 
-% Here are the additional functions that are used in the main code above:
 
+% Here are the additional functions that are used in the main code above:
 
 % change of coordinates from world coordinates x, v 
 % to coordinates y, u from spaship B's point of view:
@@ -157,6 +155,6 @@ function [t_out, x_out, v_out, xB_out] = ET(t, x, v, xB, vB0, a, h)
     xB_out = xB + h*vB0;
     [x_out, v_out] = inv_change(y, u, xB_out, vB0);
 end
-```
+
 
 
