@@ -77,7 +77,7 @@ d/dt( L ) = -(a0/sqrt(2)) * sqrt(L) < 0
 ```
 which means that ``norm(u)`` decreases with time to 0, as desired.
 
-The system of differential equations, that governs the motion, is non-linear and not explicitly solvable, so we have to integrate it numerically. To do that, I have chosen a geometric integrator method, where the system is split into two explicitly solvable systems, whose solutions are combined together to give (a very good approximation of) the solution to the original system. The systems are:
+The system of differential equations, that governs the motion, looks initially non-linear but can be linearized and explicitly solved. However, for simplicity, I have decided to integrate it numerically. To do that, I have chosen a geometric integrator method, where the system is split into two explicitly solvable systems, whose solutions are combined together to give (a very good approximation of) the solution to the original system. The systems are:
 ```matlab
 dy/dt = u / 2
 
